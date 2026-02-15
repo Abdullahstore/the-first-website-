@@ -1,0 +1,13 @@
+{
+  "name": "bester-development",
+  "version": "1.0.0",
+  "description": "Bester Development Portfolio Website",
+  "scripts": {
+    "dev": "bunx serve -l 5173 -s .",
+    "start": "bunx serve -l 5173 -s .",
+    "preview": "bunx serve -l 5173 -s ."
+  },
+  "keywords": ["portfolio", "web-design", "bester-development"],
+  "author": "Bester Development",
+  "license": "MIT"
+}

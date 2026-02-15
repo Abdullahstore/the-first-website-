@@ -2,6 +2,35 @@
 // BESTER DEVELOPMENT - MAIN SCRIPT
 // ========================================
 
+// Preloader
+const preloader = document.getElementById('preloader');
+
+// Hide preloader when page loads
+window.addEventListener('load', () => {
+    // Minimum display time for preloader (so it's visible briefly)
+    setTimeout(() => {
+        hidePreloader();
+    }, 800);
+});
+
+// Fallback - hide preloader after max time even if load event hasn't fired
+setTimeout(() => {
+    hidePreloader();
+}, 2500);
+
+function hidePreloader() {
+    if (preloader && !preloader.classList.contains('hidden')) {
+        preloader.classList.add('hidden');
+
+        // Remove from DOM after transition
+        setTimeout(() => {
+            if (preloader.parentNode) {
+                preloader.style.display = 'none';
+            }
+        }, 500);
+    }
+}
+
 // Wait for GSAP to load (deferred)
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize when GSAP is ready
